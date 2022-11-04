@@ -10,8 +10,8 @@ import java.sql.Statement;
 public class PreparedStatementDemoForSQLStatements {
 
 	public static void main(String[] args) {
-	//	getRecordsFromDatabase();
-		insertRecords();
+		getRecordsFromDatabase();
+	//	insertRecords();
 	}
 	
 	private static void getRecordsFromDatabase()
