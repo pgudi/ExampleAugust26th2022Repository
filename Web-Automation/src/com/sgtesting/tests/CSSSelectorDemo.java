@@ -200,6 +200,7 @@ public class CSSSelectorDemo {
 	 */
 	private static void relativeCSSUsingSiblingConcept()
 	{
-		oBrowser.findElement(By.cssSelector("form#frm3 > input + input + input")).sendKeys("DemoUser123");
+	//	oBrowser.findElement(By.cssSelector("form#frm3 > input + input + input")).sendKeys("DemoUser123");
+		oBrowser.findElement(By.cssSelector("form#frm3 > input + input")).sendKeys("DemoUser123");
 	}
 }
