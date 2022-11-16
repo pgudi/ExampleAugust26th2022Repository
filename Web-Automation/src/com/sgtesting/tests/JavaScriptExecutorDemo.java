@@ -22,10 +22,11 @@ public class JavaScriptExecutorDemo {
 	//	clickOnButtonField1();
 	//	clickOnButtonField2();
 	//	clickOnCheckBoxField1();
-		clickOnCheckBoxField2();
+	//	clickOnCheckBoxField2();
 	//	clickOnRadioButtonField1();
 	//	clickOnRadioButtonField2();
 	//	clikOnLink();
+		selectItemFromDropDown();
 	}
 	
 	private static void launchBrowser()
@@ -170,5 +171,22 @@ public class JavaScriptExecutorDemo {
 		System.out.println(olinks.size());
 		JavascriptExecutor js=(JavascriptExecutor) oBrowser;
 		js.executeScript("arguments[0].click();",olinks.get(1));
+	}
+	/**
+	 * Select Item from Drop Down
+	 */
+	private static void selectItemFromDropDown()
+	{
+		JavascriptExecutor js=(JavascriptExecutor) oBrowser;
+		String str="var list=document.getElementById('tools');";
+		str+="for(var i=0;i<list.length;i++)";
+		str+="{";
+		str+="if(list[i].text='Selenium IDE')";
+		str+="{";
+		str+="list[i].selected='1'";
+		str+="}";
+		str+="}";
+		
+		js.executeScript(str);
 	}
 }
