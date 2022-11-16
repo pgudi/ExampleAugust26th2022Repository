@@ -1,4 +1,4 @@
-package com.sgtesting.testngscenario;
+ package com.sgtesting.testngscenario;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
